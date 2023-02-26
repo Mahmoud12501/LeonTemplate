@@ -4,6 +4,10 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+:root{
+    --main-color:#10cab7;
+    --section-background:#f6f6f6;
+}
 body{
     font-family: 'Work Sans', sans-serif;
 }
@@ -88,6 +92,7 @@ header .links  ul{
     top: calc(100% + 15px);
     right: 0;
     display: none;
+    z-index: 1;
     
    
 }
@@ -109,7 +114,7 @@ header .links  ul a{
     display: block;
     text-decoration: none;
     color: #333;
-    padding: 10px;
+    padding: 15px;
     transition: .3s;
 }
 
@@ -124,3 +129,68 @@ header .links  ul li:not(:last-child){
 /* end header */
 
 /* start landing */
+.landing{
+    height: calc(100vh - 64px );
+    background-size: cover;
+    background-image: url('../../images/landing.jpg');
+    position: relative;
+}
+.landing .intro-text{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 320px;
+   max-width: 100%;
+   transform: translate(-50%,-50%);
+   text-align: center;
+   
+}
+.landing .intro-text h1{
+    color: var(--main-color);
+    font-size: 50px;
+    font-weight: bold;
+ 
+}
+
+.landing .intro-text p{
+    font-size: 18px;
+    line-height: 1.8;
+}
+/* end landing */
+/* start Features */
+.features{
+    background-color: var(--section-background);
+}
+.features{
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+}
+.features .container{
+   
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 20px;
+}
+.features .container div{
+   text-align: center;
+   padding: 20px;
+   
+}
+
+.features .container  i{
+    color: var(--main-color);
+    font-size: 40px;
+    line-height: 1.8;
+}
+.features .container  h3{
+    font-weight:800;
+    margin: 30px 0;
+}
+.features .container  p{
+    line-height: 1.8;
+    opacity: 70%;
+    font-size: 17px;
+}
+
+/* end Features */
